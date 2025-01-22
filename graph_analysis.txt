@@ -1,0 +1,11 @@
+Number of samples per emotion in the dataset
+=============================================
+
+The number of samples per emotion in the GoEmotions dataset are as follows:
+
+Anger: 264
+Fear: 1295
+Joy: 538
+Sadness: 709
+Surprise: 670
+
