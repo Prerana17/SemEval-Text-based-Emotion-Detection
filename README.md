@@ -4,21 +4,24 @@ Emotion Detection, Large Language Models (LLMs), BERT, RoBERTa, Multi-label Clas
 
 ## Key Findings/Results
 * The study achieved a high F1 score by fine-tuning the RoBERTa model, showing significant success in predicting inputs. 
-* BERT and RoBERTa models were trained to identify emotions in text-based input, which were categorized into five different emotions: joy, fear, sadness, surprise, and anger.
+* BERT and RoBERTa models were trained to identify emotions in text-based input. The emotions were categorized into five categories: joy, fear, sadness, surprise, and anger.
 * The F1 score improved significantly with weight adjustments in the binary cross-entropy loss function: The initial F1 score was around 0.60 for underrepresented emotions. Post-adjustment, F1 scores increased to approximately 0.75-0.80.
 * RoBERTa model enhancements resulted in better generalization and performance: Validation loss decreased from 0.5904 to 0.1694, and the F1 score increased from 0.4775 to 0.7531 over 20 epochs.
 
-![f1_score_plot](https://github.com/user-attachments/assets/92c36a3f-b9f9-4589-bae4-1a714069b48e)
+    ![f1_score_plot](https://github.com/user-attachments/assets/92c36a3f-b9f9-4589-bae4-1a714069b48e)
 
   
 ## Methodology
 * The dataset used for this project was from the SemEval Competition 2025, specifically Track A: Multi-label Emotion Detection. The dataset includes key columns such as ID, Text, and binary labels for emotions like anger, sadness, joy, fear, and surprise. Data pre-processing involved handling emojis, contractions, acronyms, and special characters, using a function defined based on a subsample from the training dataset.
 
+    ![emotions](https://github.com/user-attachments/assets/84f63ec7-f2f9-4272-bd5b-b88a809f9053)
+
+
 * For the modeling step, the study utilized the Hugging Face model "emotion-english-distilroberta-base" to pre-train the BERT model due to its high technical performance and diverse training datasets. The tokenization process converted raw input text into a format compatible with BERT using the BERT tokenizer. Embeddings were computed for each token to retain the order of tokens.
 
 * The experimental procedures involved fine-tuning the BERT model with RoBERTa by implementing multiple changes to the original BERT pre-training approach. This included dynamic masking and a learning rate warm-up strategy. Class imbalance was addressed by incorporating positive weight adjustments into the binary cross-entropy loss function.
 
-![class_adj](https://github.com/user-attachments/assets/0a16cac0-38ba-4d24-b36b-54ebd8e6cd0a)
+    ![class_adj](https://github.com/user-attachments/assets/0a16cac0-38ba-4d24-b36b-54ebd8e6cd0a)
 
 
 ## Interventions and Outcomes
