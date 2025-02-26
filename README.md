@@ -37,6 +37,9 @@ Emotion Detection, Large Language Models (LLMs), BERT, RoBERTa, Multi-label Clas
 * Model Performance Improvements:
     * Significant increase in F1 scores for underrepresented emotions.
     * Better generalization and performance metrics observed.
+
+    <img src="https://github.com/Prerana17/SemEval-Text-based-Emotion-Detection/blob/main/graphs/emotion_heatmap_precision_recall_F1.png" width="600" class="center">
+      
       
 ## Limitations
   * Class Imbalance: Despite adjustments, there were still challenges in accurately predicting minority classes.
